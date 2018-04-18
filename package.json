@@ -1,0 +1,28 @@
+{
+  "name": "egg-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "egg-bin dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FFFfengfengfeng/egg-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FFFfengfengfeng/egg-demo/issues"
+  },
+  "homepage": "https://github.com/FFFfengfengfeng/egg-demo#readme",
+  "dependencies": {
+    "egg": "^2.7.1",
+    "egg-view-nunjucks": "^2.2.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.6.3"
+  }
+}
