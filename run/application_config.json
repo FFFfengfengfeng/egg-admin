@@ -100,6 +100,7 @@
         "F:\\FFF\\work\\egg-demo\\node_modules\\egg-logrotator\\config\\locales",
         "F:\\FFF\\work\\egg-demo\\node_modules\\egg-static\\config\\locales",
         "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\locales",
+        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-ejs\\config\\locales",
         "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\locales",
         "F:\\FFF\\work\\egg-demo\\config\\locales"
       ],
@@ -158,11 +159,23 @@
       "files": "<LRU>"
     },
     "view": {
-      "root": "F:\\FFF\\work\\egg-demo\\app\\view",
+      "root": [
+        "F:\\FFF\\work\\egg-demo\\app\\view"
+      ],
       "cache": false,
       "defaultExtension": ".html",
-      "defaultViewEngine": "",
-      "mapping": {}
+      "defaultViewEngine": "ejs",
+      "mapping": {
+        ".ejs": "ejs"
+      }
+    },
+    "ejs": {
+      "root": "F:\\FFF\\work\\egg-demo\\app\\view",
+      "cache": false,
+      "debug": false,
+      "compileDebug": true,
+      "delimiter": null,
+      "strict": false
     },
     "env": "local",
     "name": "web",
@@ -178,7 +191,9 @@
       "private": true,
       "dependencies": {
         "egg": "^2.2.1",
-        "egg-scripts": "^2.5.0"
+        "egg-scripts": "^2.5.0",
+        "egg-view": "^2.1.0",
+        "egg-view-ejs": "^2.0.0"
       },
       "devDependencies": {
         "autod": "^3.0.1",
@@ -474,6 +489,19 @@
       "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
       "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view",
       "version": "2.1.0"
+    },
+    "ejs": {
+      "enable": true,
+      "package": "egg-view-ejs",
+      "name": "ejs",
+      "dependencies": [
+        "view"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\FFF\\work\\egg-demo\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-ejs",
+      "version": "2.0.0"
     }
   }
 }

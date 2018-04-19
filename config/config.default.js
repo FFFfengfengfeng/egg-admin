@@ -9,5 +9,18 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  //模版配置
+  config.view = {
+
+    //全局配置默认模版
+    defaultViewEngine: 'ejs',
+
+    //匹配ejs后缀文件
+    mapping: {
+      '.ejs': 'ejs'
+    }
+  }
+
   return config;
 };
+
