@@ -1,9 +1,11 @@
+'use strict';
+
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
-    async index() {
-        await this.ctx.render('home/index.html');
-    }
+  async index() {
+    this.ctx.body = 'hi, egg';
+  }
 }
 
 module.exports = HomeController;

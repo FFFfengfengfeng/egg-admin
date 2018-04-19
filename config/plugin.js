@@ -1,4 +1,4 @@
-exports.nunjucks = {
-    enable: true,
-    package: 'egg-view-nunjucks'
-};
+'use strict';
+
+// had enabled by egg
+// exports.static = true;

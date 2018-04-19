@@ -1,15 +1,6 @@
 {
-  "key": "F:\\FFF\\work\\egg-demo\\config\\config.default.js",
-  "view": {
-    "defalutViewEngine": "F:\\FFF\\work\\egg-demo\\config\\config.default.js",
-    "mapping": {
-      ".html": "F:\\FFF\\work\\egg-demo\\config\\config.default.js"
-    },
-    "root": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.local.js",
-    "defaultExtension": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.default.js",
-    "defaultViewEngine": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.default.js"
-  },
+  "keys": "F:\\FFF\\work\\egg-demo\\config\\config.default.js",
+  "middleware": "F:\\FFF\\work\\egg-demo\\config\\config.default.js",
   "session": {
     "maxAge": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-session\\config\\config.default.js",
     "key": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-session\\config\\config.default.js",
@@ -135,16 +126,15 @@
     "buffer": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-static\\config\\config.default.js",
     "maxFiles": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-static\\config\\config.default.js"
   },
-  "nunjucks": {
-    "autoescape": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "throwOnUndefined": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "trimBlocks": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "lstripBlocks": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "cache": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-nunjucks\\config\\config.local.js"
+  "view": {
+    "root": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\config.default.js"
   },
   "env": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
   "name": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
-  "keys": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
   "proxy": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
   "protocolHeaders": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
   "ipHeaders": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
@@ -153,29 +143,45 @@
     "name": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
     "version": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
     "description": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
-    "main": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+    "private": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+    "dependencies": {
+      "egg": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "autod": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "autod-egg": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "egg-bin": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "egg-ci": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "eslint": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "eslint-config-egg": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "webstorm-disable-index": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
+    },
+    "engines": {
+      "node": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
+    },
     "scripts": {
+      "start": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "stop": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "dev": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "debug": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
       "test": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
-      "dev": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
+      "test-local": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "cov": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "lint": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "ci": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
+      "autod": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
+    },
+    "ci": {
+      "version": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
     },
     "repository": {
       "type": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
       "url": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
     },
-    "keywords": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
     "author": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
-    "license": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
-    "bugs": {
-      "url": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
-    },
-    "homepage": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
-    "dependencies": {
-      "egg": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
-      "egg-view-nunjucks": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
-    },
-    "devDependencies": {
-      "egg-bin": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
-    }
+    "license": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js"
   },
   "baseDir": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
   "HOME": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\config.default.js",
