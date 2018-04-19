@@ -19,8 +19,21 @@ a{
     color: #666;
 }
 
-
 /*类*/
+/*工具类*/
+.clear::after{
+    display: block;
+    clear: both;
+    content: '  ';
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+/*样式类*/
 .header{
     height: 59px;
     line-height: 59px;
@@ -69,9 +82,21 @@ a{
     background-color: #4275F2;
     color: #FFF;
 }
-.article{
-    background-color: #FFF;
+.article-list{
+    background-color: #FFF;     
     margin-left: 230px;
     height: 100%;
-    padding: 15px;
+}
+.article{
+   padding: 40px 20px;
+   border-bottom: 1px dotted #CCC;
+   cursor: pointer;
+   display: block;
+}
+.article:hover{
+    background-color: #EFEFEF;
+    transition: all .25s;
+}
+.article .title{
+    height: 45px;
 }
