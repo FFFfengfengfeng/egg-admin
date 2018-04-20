@@ -10,42 +10,16 @@
 </head>
 
 <body>
-    <%- include('common/header', {active: data.active}); %>
+    <%- include('common/header'); %>
     <div class="container main">
-        <%- include('common/menu'); %>
+        <%- include('common/menu', {active: data.active}); %>
         <div class="article-list">
-            <a class="article">
+            <a href="/details?id=1&active=<%= data.active%>" class="article">
                 <div class="title clear">
                     <h2 class="left">DESTOON6.0 无版权精简开发版</h2>
                     <ul class="right">
-                        <li class="left">2013年07月22日 11:52</li>
-                        <li class="left">862</li>
-                    </ul>
-                </div>
-                <div class="intro">
-                        想让destoon去掉跟下的member
-    1.在/admin/login.inc.php 
-    将：require DT_ROOT.'/module/member/member.class.php';...                        </div>
-            </a>
-            <a class="article">
-                <div class="title clear">
-                    <h2 class="left">DESTOON6.0 无版权精简开发版</h2>
-                    <ul class="right">
-                        <li class="left">2013年07月22日 11:52</li>
-                        <li class="left">862</li>
-                    </ul>
-                </div>
-                <div class="intro">
-                        想让destoon去掉跟下的member
-    1.在/admin/login.inc.php 
-    将：require DT_ROOT.'/module/member/member.class.php';...                        </div>
-            </a>
-            <a class="article">
-                <div class="title clear">
-                    <h2 class="left">DESTOON6.0 无版权精简开发版</h2>
-                    <ul class="right">
-                        <li class="left">2013年07月22日 11:52</li>
-                        <li class="left">862</li>
+                        <li class="left" style="margin-right: 20px;"><span class="icon icon-clock"></span>2013年07月22日 11:52</li>
+                        <li class="left"><span class="icon icon-watch"></span> 862</li>
                     </ul>
                 </div>
                 <div class="intro">

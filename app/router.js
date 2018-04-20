@@ -9,4 +9,5 @@ module.exports = app => {
   router.get('/hyper', controller.home.hyper);
   router.get('/style', controller.home.style);
   router.get('/ecma', controller.home.ecma);
+  router.get('/details', controller.home.details);
 };

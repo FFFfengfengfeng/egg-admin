@@ -19,6 +19,31 @@ a{
     color: #666;
 }
 
+/*字体图标*/
+@font-face {
+    font-family: 'iconfont';  /* project id 636337 */
+    src: url('//at.alicdn.com/t/font_636337_6242wzyi67pvte29.eot');
+    src: url('//at.alicdn.com/t/font_636337_6242wzyi67pvte29.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_636337_6242wzyi67pvte29.woff') format('woff'),
+    url('//at.alicdn.com/t/font_636337_6242wzyi67pvte29.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_636337_6242wzyi67pvte29.svg#iconfont') format('svg');
+}
+.icon{
+    font-family: 'iconfont' !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*时钟*/
+.icon-clock::before{
+    content: '\e615';
+}
+/*阅读*/
+.icon-watch::before{
+    content: '\e73b';
+}
+
 /*类*/
 /*工具类*/
 .clear::after{
@@ -99,4 +124,30 @@ a{
 }
 .article .title{
     height: 45px;
+}
+.article .title ul{
+    color: #999;
+}
+.article-details{
+    background-color: #FFF;     
+    margin-left: 230px;
+    height: 100%;
+    padding: 50px;
+}
+.article-details .title{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.article-details .time{
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+.article-details .content{
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+    text-indent: 2em;
+    line-height: 25px;
+    text-align: justify;    
 }
