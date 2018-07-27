@@ -83,26 +83,27 @@
     },
     "onerror": {
       "errorPageUrl": "",
-      "appErrorFilter": null
+      "appErrorFilter": null,
+      "templatePath": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-session\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-security\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-jsonp\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-onerror\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-i18n\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-watcher\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-multipart\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-development\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-schedule\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-logrotator\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-static\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-ejs\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\locales",
-        "F:\\FFF\\work\\egg-demo\\config\\locales"
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-session\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-security\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-jsonp\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-onerror\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-i18n\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-watcher\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-multipart\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-development\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-schedule\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-logrotator\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-static\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-view\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-view-ejs\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\locales",
+        "F:\\FFF\\work\\egg-admin\\config\\locales"
       ],
       "queryField": "locale",
       "cookieField": "locale",
@@ -112,8 +113,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "multipart": {
@@ -137,7 +138,7 @@
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "F:\\FFF\\work\\egg-demo\\logs\\web\\egg-schedule.log"
+        "file": "F:\\FFF\\work\\egg-admin\\logs\\admin\\egg-schedule.log"
       }
     },
     "logrotator": {
@@ -151,7 +152,7 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "F:\\FFF\\work\\egg-demo\\app\\public",
+      "dir": "F:\\FFF\\work\\egg-admin\\app\\public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
@@ -160,7 +161,7 @@
     },
     "view": {
       "root": [
-        "F:\\FFF\\work\\egg-demo\\app\\view"
+        "F:\\FFF\\work\\egg-admin\\app\\view"
       ],
       "cache": false,
       "defaultExtension": ".html",
@@ -170,7 +171,7 @@
       }
     },
     "ejs": {
-      "root": "F:\\FFF\\work\\egg-demo\\app\\view",
+      "root": "F:\\FFF\\work\\egg-admin\\app\\view",
       "cache": false,
       "debug": false,
       "compileDebug": true,
@@ -178,14 +179,14 @@
       "strict": false
     },
     "env": "local",
-    "name": "web",
-    "keys": "<String len: 22>",
+    "name": "admin",
+    "keys": "<String len: 24>",
     "proxy": false,
     "protocolHeaders": "x-forwarded-proto",
     "ipHeaders": "x-forwarded-for",
     "hostHeaders": "",
     "pkg": {
-      "name": "web",
+      "name": "admin",
       "version": "1.0.0",
       "description": "",
       "private": true,
@@ -193,7 +194,8 @@
         "egg": "^2.2.1",
         "egg-scripts": "^2.5.0",
         "egg-view": "^2.1.0",
-        "egg-view-ejs": "^2.0.0"
+        "egg-view-ejs": "^2.0.0",
+        "egg-view-nunjucks": "^2.2.0"
       },
       "devDependencies": {
         "autod": "^3.0.1",
@@ -209,8 +211,8 @@
         "node": ">=8.9.0"
       },
       "scripts": {
-        "start": "egg-scripts start --daemon --title=egg-server-web",
-        "stop": "egg-scripts stop --title=egg-server-web",
+        "start": "egg-scripts start --daemon --title=egg-server-admin",
+        "stop": "egg-scripts stop --title=egg-server-admin",
         "dev": "egg-bin dev",
         "debug": "egg-bin debug",
         "test": "npm run lint -- --fix && npm run test-local",
@@ -230,9 +232,9 @@
       "author": "",
       "license": "MIT"
     },
-    "baseDir": "F:\\FFF\\work\\egg-demo",
+    "baseDir": "F:\\FFF\\work\\egg-admin",
     "HOME": "C:\\Users\\hhf",
-    "rundir": "F:\\FFF\\work\\egg-demo\\run",
+    "rundir": "F:\\FFF\\work\\egg-admin\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -263,7 +265,7 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "F:\\FFF\\work\\egg-demo\\logs\\web",
+      "dir": "F:\\FFF\\work\\egg-admin\\logs\\admin",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -271,14 +273,14 @@
       "disableConsoleAfterReady": false,
       "outputJSON": false,
       "buffer": true,
-      "appLogName": "web-web.log",
+      "appLogName": "admin-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
       "coreLogger": {
         "consoleLevel": "WARN"
       },
-      "allowDebugAtProd": true,
+      "allowDebugAtProd": false,
       "type": "application"
     },
     "httpclient": {
@@ -325,6 +327,7 @@
       }
     },
     "clusterClient": {
+      "maxWaitTime": 60000,
       "responseTimeout": 60000
     },
     "onClientError": null,
@@ -353,8 +356,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-session",
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -366,9 +369,9 @@
         "session"
       ],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-security",
-      "version": "2.2.2"
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-security",
+      "version": "2.2.3"
     },
     "jsonp": {
       "enable": true,
@@ -379,8 +382,8 @@
         "security"
       ],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-jsonp",
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -392,9 +395,9 @@
         "jsonp"
       ],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-onerror",
-      "version": "2.0.0"
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-onerror",
+      "version": "2.1.0"
     },
     "i18n": {
       "enable": true,
@@ -403,8 +406,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-i18n",
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-i18n",
       "version": "2.0.0"
     },
     "watcher": {
@@ -414,8 +417,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-watcher",
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-watcher",
       "version": "3.0.0"
     },
     "multipart": {
@@ -425,8 +428,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-multipart",
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-multipart",
       "version": "2.0.0"
     },
     "development": {
@@ -440,9 +443,9 @@
       "env": [
         "local"
       ],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-development",
-      "version": "2.2.0"
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-development",
+      "version": "2.3.1"
     },
     "schedule": {
       "enable": true,
@@ -451,8 +454,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-schedule",
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-schedule",
       "version": "3.3.0"
     },
     "logrotator": {
@@ -464,8 +467,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-logrotator",
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-logrotator",
       "version": "3.0.3"
     },
     "static": {
@@ -475,9 +478,9 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-static",
-      "version": "2.1.0"
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-static",
+      "version": "2.1.1"
     },
     "view": {
       "enable": true,
@@ -486,8 +489,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view",
+      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-view",
       "version": "2.1.0"
     },
     "ejs": {
@@ -499,8 +502,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-demo\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-demo\\node_modules\\egg-view-ejs",
+      "from": "F:\\FFF\\work\\egg-admin\\config\\plugin.js",
+      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-view-ejs",
       "version": "2.0.0"
     }
   }
