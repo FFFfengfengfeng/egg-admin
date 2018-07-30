@@ -16,15 +16,14 @@
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
       "csrf": {
-        "enable": true,
+        "enable": false,
         "useSession": false,
         "ignoreJSON": false,
         "cookieName": "csrfToken",
         "sessionName": "csrfToken",
         "headerName": "x-csrf-token",
         "bodyName": "_csrf",
-        "queryName": "_csrf",
-        "matching": "<Function anonymous>"
+        "queryName": "_csrf"
       },
       "xframe": {
         "enable": true,
@@ -41,8 +40,7 @@
         "matching": "<Function anonymous>"
       },
       "methodnoallow": {
-        "enable": true,
-        "matching": "<Function anonymous>"
+        "enable": false
       },
       "noopen": {
         "enable": true,
@@ -68,7 +66,10 @@
       "ssrf": {
         "ipBlackList": null,
         "checkAddress": null
-      }
+      },
+      "dominWhiteList": [
+        "http://localhost:3000"
+      ]
     },
     "helper": {
       "shtml": {}
@@ -84,26 +85,27 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+      "templatePath": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-session\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-security\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-jsonp\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-onerror\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-i18n\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-watcher\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-multipart\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-development\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-schedule\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-logrotator\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-static\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-view\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg-view-ejs\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\locales",
-        "F:\\FFF\\work\\egg-admin\\config\\locales"
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-session\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-security\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-jsonp\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-onerror\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-i18n\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-watcher\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-multipart\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-development\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-schedule\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-logrotator\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-static\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-view\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-sequelize\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-cors\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\locales",
+        "F:\\FFF\\open\\egg-new-api\\config\\locales"
       ],
       "queryField": "locale",
       "cookieField": "locale",
@@ -113,8 +115,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "multipart": {
@@ -138,7 +140,7 @@
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "F:\\FFF\\work\\egg-admin\\logs\\admin\\egg-schedule.log"
+        "file": "F:\\FFF\\open\\egg-new-api\\logs\\admin\\egg-schedule.log"
       }
     },
     "logrotator": {
@@ -152,7 +154,7 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "F:\\FFF\\work\\egg-admin\\app\\public",
+      "dir": "F:\\FFF\\open\\egg-new-api\\app\\public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
@@ -160,23 +162,23 @@
       "files": "<LRU>"
     },
     "view": {
-      "root": [
-        "F:\\FFF\\work\\egg-admin\\app\\view"
-      ],
+      "root": "F:\\FFF\\open\\egg-new-api\\app\\view",
       "cache": false,
       "defaultExtension": ".html",
-      "defaultViewEngine": "ejs",
-      "mapping": {
-        ".ejs": "ejs"
-      }
+      "defaultViewEngine": "",
+      "mapping": {}
     },
-    "ejs": {
-      "root": "F:\\FFF\\work\\egg-admin\\app\\view",
-      "cache": false,
-      "debug": false,
-      "compileDebug": true,
-      "delimiter": null,
-      "strict": false
+    "sequelize": {
+      "dialect": "mysql",
+      "database": "news",
+      "host": "localhost",
+      "port": "3306",
+      "username": "root",
+      "password": "<String len: 0>"
+    },
+    "cors": {
+      "origin": "*",
+      "credentials": true
     },
     "env": "local",
     "name": "admin",
@@ -192,10 +194,14 @@
       "private": true,
       "dependencies": {
         "egg": "^2.2.1",
+        "egg-cors": "^2.1.0",
+        "egg-mysql": "^3.0.0",
         "egg-scripts": "^2.5.0",
+        "egg-sequelize": "^3.1.5",
         "egg-view": "^2.1.0",
         "egg-view-ejs": "^2.0.0",
-        "egg-view-nunjucks": "^2.2.0"
+        "egg-view-nunjucks": "^2.2.0",
+        "mysql2": "^1.5.3"
       },
       "devDependencies": {
         "autod": "^3.0.1",
@@ -232,9 +238,9 @@
       "author": "",
       "license": "MIT"
     },
-    "baseDir": "F:\\FFF\\work\\egg-admin",
+    "baseDir": "F:\\FFF\\open\\egg-new-api",
     "HOME": "C:\\Users\\hhf",
-    "rundir": "F:\\FFF\\work\\egg-admin\\run",
+    "rundir": "F:\\FFF\\open\\egg-new-api\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -265,7 +271,7 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "F:\\FFF\\work\\egg-admin\\logs\\admin",
+      "dir": "F:\\FFF\\open\\egg-new-api\\logs\\admin",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -308,6 +314,7 @@
       "logging": false
     },
     "coreMiddleware": [
+      "cors",
       "meta",
       "siteFile",
       "notfound",
@@ -356,8 +363,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-session",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -369,8 +376,8 @@
         "session"
       ],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-security",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-security",
       "version": "2.2.3"
     },
     "jsonp": {
@@ -382,8 +389,8 @@
         "security"
       ],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-jsonp",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -395,8 +402,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-onerror",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -406,8 +413,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-i18n",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-i18n",
       "version": "2.0.0"
     },
     "watcher": {
@@ -417,8 +424,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-watcher",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-watcher",
       "version": "3.0.0"
     },
     "multipart": {
@@ -428,8 +435,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-multipart",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-multipart",
       "version": "2.0.0"
     },
     "development": {
@@ -443,8 +450,8 @@
       "env": [
         "local"
       ],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-development",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-development",
       "version": "2.3.1"
     },
     "schedule": {
@@ -454,8 +461,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-schedule",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-schedule",
       "version": "3.3.0"
     },
     "logrotator": {
@@ -467,8 +474,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-logrotator",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-logrotator",
       "version": "3.0.3"
     },
     "static": {
@@ -478,8 +485,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-static",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-static",
       "version": "2.1.1"
     },
     "view": {
@@ -489,22 +496,31 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\node_modules\\egg\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-view",
+      "from": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-view",
       "version": "2.1.0"
     },
-    "ejs": {
+    "sequelize": {
       "enable": true,
-      "package": "egg-view-ejs",
-      "name": "ejs",
-      "dependencies": [
-        "view"
-      ],
+      "package": "egg-sequelize",
+      "name": "sequelize",
+      "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "F:\\FFF\\work\\egg-admin\\config\\plugin.js",
-      "path": "F:\\FFF\\work\\egg-admin\\node_modules\\egg-view-ejs",
-      "version": "2.0.0"
+      "from": "F:\\FFF\\open\\egg-new-api\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-sequelize",
+      "version": "3.1.5"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\FFF\\open\\egg-new-api\\config\\plugin.js",
+      "path": "F:\\FFF\\open\\egg-new-api\\node_modules\\egg-cors",
+      "version": "2.1.0"
     }
   }
 }

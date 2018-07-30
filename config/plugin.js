@@ -3,7 +3,13 @@
 // had enabled by egg
 // exports.static = true;
 
-exports.ejs = {
+exports.sequelize = {
     enable: true,
-    package: 'egg-view-ejs'
+    package: 'egg-sequelize'
+}
+
+// 开启cors插件
+exports.cors = {
+    enable: true,
+    package: 'egg-cors',
 }
