@@ -9,5 +9,4 @@ class NewsController extends Controller {
         return ctx.body = await ctx.service.news.create();
     }
 }
-
 module.exports = NewsController;
